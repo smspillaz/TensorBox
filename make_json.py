@@ -84,6 +84,7 @@ def next(event):  #called when the next button is hit
         plt.close()
     else:
         filename = path + "/" + onlyfiles.pop()
+        print("Reading " + filename)
         image = mpimg.imread(filename)
         imshow_obj.set_data(image)
         top_corners[:] = []
