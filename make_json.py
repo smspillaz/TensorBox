@@ -48,6 +48,7 @@ def skip(event):  #called when the skip button is hit
         top_corners[:] = []
         bottom_corners[:] = []
         removeAllPatches()
+        plt.draw()
 
 def next(event):  #called when the next button is hit
     global filename
@@ -88,6 +89,7 @@ def next(event):  #called when the next button is hit
         top_corners[:] = []
         bottom_corners[:] = []
         removeAllPatches()
+        plt.draw()
     
 
 def clear(event): #called when the clear button is hit
