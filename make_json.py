@@ -13,6 +13,7 @@
 #enforce convention that rects are in top left, bottom right order
 #correct name of image path object
 
+import os
 import sys
 import json
 import matplotlib.pyplot as plt
@@ -127,7 +128,7 @@ progress_outfile = open(outfile_name + "_work", 'w')
 
 
 
-onlyfiles = [f for f in listdir(path) if isfile(join(path, f))]
+onlyfiles = list(reversed(sorted([f for f in listdir(path) if isfile(join(path, f))], key=lambda x: int(os.path.splitext(x)[0]))))
 
 #
 filename = path + "/" + onlyfiles.pop()
